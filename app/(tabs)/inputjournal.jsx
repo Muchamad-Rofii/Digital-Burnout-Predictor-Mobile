@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { View, KeyboardAvoidingView, ScrollView, Platform, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import TopNavbar from '../components/Dashboard/TopNavbar';
-import BottomTabBar from '../components/Dashboard/BottomTabBar';
-import JournalHeader from '../components/Journal/JournalHeader';
-import JournalInputCard from '../components/Journal/JournalInputCard';
-import JournalActions from '../components/Journal/JournalActions';
+import TopNavbar from '../../components/Navigation/TopNavbar';
+import BottomTabBar from '../../components/Navigation/BottomTabBar';
+import JournalHeader from '../../components/Journal/JournalHeader';
+import JournalInputCard from '../../components/Journal/JournalInputCard';
+import JournalActions from '../../components/Journal/JournalActions';
 
 export default function InputJournal() {
   const [title, setTitle] = useState('');
@@ -76,7 +76,7 @@ export default function InputJournal() {
       </KeyboardAvoidingView>
       
       {/* Bottom Navigation */}
-      <BottomTabBar activeTab="journal" />
+
     </SafeAreaView>
   );
 }

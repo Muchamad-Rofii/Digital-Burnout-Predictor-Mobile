@@ -2,12 +2,12 @@ import React from 'react';
 import { View, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 // Import komponen atom
-import TopNavbar from '../components/Dashboard/TopNavbar';
-import PageTitle from '../components/Dashboard/PageTitle';
-import StatsGrid from '../components/Dashboard/StatsGrid';
-import RecentEntries from '../components/Dashboard/RecentEntries';
-import RecommendationActivities from '../components/Dashboard/RecommendationActivities';
-import BottomTabBar from '../components/Dashboard/BottomTabBar';
+import TopNavbar from '../../components/Navigation/TopNavbar';
+import PageTitle from '../../components/Dashboard/PageTitle';
+import StatsGrid from '../../components/Dashboard/StatsGrid';
+import RecentEntries from '../../components/Dashboard/RecentEntries';
+import RecommendationActivities from '../../components/Dashboard/RecommendationActivities';
+import BottomTabBar from '../../components/Navigation/BottomTabBar';
 
 export default function HomeScreen() {
   return (
@@ -36,7 +36,7 @@ export default function HomeScreen() {
           </View>
         </ScrollView>
       </View>
-      <BottomTabBar />
+
     </SafeAreaView>
   );
 }

@@ -4,11 +4,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import * as SecureStore from 'expo-secure-store';
 
-import TopNavbar from '../components/Dashboard/TopNavbar';
-import BottomTabBar from '../components/Dashboard/BottomTabBar';
-import ProfileHeader from '../components/Profile/ProfileHeader';
-import ProfileMenu from '../components/Profile/ProfileMenu';
-import LogoutButton from '../components/Profile/LogoutButton';
+import TopNavbar from '../../components/Navigation/TopNavbar';
+import BottomTabBar from '../../components/Navigation/BottomTabBar';
+import ProfileHeader from '../../components/Profile/ProfileHeader';
+import ProfileMenu from '../../components/Profile/ProfileMenu';
+import LogoutButton from '../../components/Profile/LogoutButton';
 
 const menuItems = [
   { id: 1, label: "Change Password", icon: "lock" },
@@ -85,7 +85,7 @@ export default function ProfilePage() {
       </ScrollView>
 
       {/* Navigasi Bawah */}
-      <BottomTabBar activeTab="profile" />
+
     </SafeAreaView>
   );
 }

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { View, ScrollView, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import TopNavbar from '../components/Dashboard/TopNavbar';
-import BottomTabBar from '../components/Dashboard/BottomTabBar';
-import JournalHeader from '../components/Journal/JournalHeader';
-import HistoryFilter from '../components/History/HistoryFilter';
-import HistoryCard from '../components/History/HistoryCard';
+import TopNavbar from '../../components/Navigation/TopNavbar';
+import BottomTabBar from '../../components/Navigation/BottomTabBar';
+import JournalHeader from '../../components/Journal/JournalHeader';
+import HistoryFilter from '../../components/History/HistoryFilter';
+import HistoryCard from '../../components/History/HistoryCard';
 
 const dummyHistory = [
   {
@@ -119,7 +119,7 @@ export default function HistoryPage() {
       </ScrollView>
 
       {/* Navigasi Bawah */}
-      <BottomTabBar activeTab="history" />
+
     </SafeAreaView>
   );
 }

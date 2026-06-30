@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { View, ActivityIndicator } from 'react-native';
-// useSegments dihapus karena kita tidak butuh pengecekan berulang
 import { Stack, useRouter } from 'expo-router'; 
 import '../global.css';
 import * as SecureStore from 'expo-secure-store';
@@ -17,7 +16,7 @@ export default function RootLayout() {
         // Pengecekan hanya jalan 1x saat aplikasi dibuka.
         // Jika token sudah ada, langsung lempar ke Dashboard.
         if (token) {
-          router.replace('/home');
+          router.replace('/(tabs)/home');
         }
       } catch (error) {
         console.log("Gagal membaca token:", error);
@@ -40,7 +39,9 @@ export default function RootLayout() {
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="index" />
-      <Stack.Screen name="home" />
+      <Stack.Screen name="Login/index" />
+      <Stack.Screen name="Register/register" />
+      <Stack.Screen name="(tabs)" />
     </Stack>
   );
 }
